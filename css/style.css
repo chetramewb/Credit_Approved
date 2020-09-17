@@ -338,8 +338,7 @@ font-display: swap;
 
 
 body {font-size:16px; margin:0 auto;    font-family: 'MADE TOMMY';  font-family: 'Cabin';  font-family: 'Corbel'; }
-.container{max-width:1170px;
-margin: 0 auto; box-sizing: border-box;}
+
 h1,h2,h3,h4,h5,h6 {font-family: 'Corbel';}
 p{font-family: 'MADE TOMMY';}
 /***********************main-header*************************/
@@ -519,6 +518,10 @@ overflow: hidden;
 text-align: center;
 padding: 100px 0px;
 }
+.credit-image img {
+width: 100%;
+object-fit: cover;
+}
 
 .credit-text {
 display: block;
@@ -564,6 +567,7 @@ padding-top: 40px;
 }
 .car-driving img {
 box-shadow: -40px -40px 0px -0.5px #d9e1f7;
+width:100%;
 }
 .car-driving1 img {
 width: 100%;
@@ -641,7 +645,6 @@ color: #1f3785;
 }
 .credit-icon-heading:hover {
 transition: all ease-in-out 0.5s;
-transform: scale(1.1);
 box-shadow: 0 0 5px 5px #88888829;
 border: none;
 }
@@ -650,10 +653,10 @@ border: none;
 width: 100%;
 display: block;
 background: url(../images/car-bg.png);
-background-size: cover;
 background-repeat: no-repeat;
-height: 703px;
-margin-bottom: 50px;
+height: 530px;
+background-position: center;
+margin: 0 auto;
 }
 
 .heading-car-layout{
@@ -679,24 +682,48 @@ font-weight: 400;
 
 footer {
 width: 100%;
-border: oldlace;
-background: #d9e1f7;
-position: relative;
-padding: 20px 0px;
+background: url(../images/footer-bg.png);
+background-repeat: no-repeat;
+background-size:cover;
+padding-top: 100px;
 }
+
+/******
+footer::before {
+position: absolute;
+content: "";
+background: url(../images/footer-bg.png);
+background-repeat: no-repeat;
+width: 100%;
+height: 100px;
+top: -100px;
+}*****/
+
 
 footer .navbar.navbar-expand-lg {
 display: block;
 overflow: hidden;
 padding-top: 25px;
 float: right;
-padding: 0px;
+}
+footer .navbar.navbar-expand-lg ul li a {
+color: #314165;
+font-size: 16px;
+letter-spacing: 0px;
+font-style: normal;
+font-weight: 500;
+font-family: 'MADE TOMMY';
+text-transform: uppercase;
+}
+footer .navbar.navbar-expand-lg ul li a:hover {
+color: #df1e3a;
 }
 .full-copy {
 display: flex;
 display: -webkit-flex;
 justify-content: center;
 -webkit-justify-content: center;
+width:100%;
 }
 
 .social-icon {
@@ -724,4 +751,203 @@ text-align: center;
 text-decoration: none;
 display: flex;
 display: -webkit-flex;
+}
+
+.copy-right {
+font-size: 18px;
+font-weight: 400;
+color: #566993;
+padding-top: 5px;
+}
+
+@media only screen and (min-width:1440px){ 
+footer {   
+padding-top: 180px;
+}
+}
+
+@media only screen and (max-width:1199px){ 
+.navbar.navbar-expand-lg ul li {
+padding: 0px 10px;
+}
+.navbar.navbar-expand-lg ul li a {  
+font-size: 14px;
+}
+.credit-text h1 {
+font-size: 32px;
+}
+.car-driving1 h2 {
+font-size: 24px;
+}
+.credit-icon-text h1 {
+font-size: 32px;
+}
+.heading-car-layout h1 {
+font-size: 32px;
+}
+footer .navbar.navbar-expand-lg ul li a {  
+font-size: 14px;
+}
+footer .navbar.navbar-expand-lg ul li {
+padding: 0px 8px;
+}
+body {
+overflow-x: hidden;
+}
+}
+@media only screen and (max-width:991px){ 
+.navbar-toggler {
+position: absolute;
+right: 0;
+top: 26px;
+}
+.main-header {  
+padding: 0px;
+}
+.main-header .navbar.navbar-expand-lg {
+display: block;
+overflow: visible;  
+padding-top: 25px;
+float: unset;  
+text-align: center;
+}
+.logo {
+padding-bottom: 20px;
+}
+.banner-text-heading {      
+max-width: 100% !important;
+}
+.banner-text-heading h1 {
+font-size: 70px;
+line-height: 78px;   
+}
+.credit-text h1 {
+font-size: 26px;
+}
+.drive-heading h1 {
+font-size: 32px;
+}
+.car-driving1 h2 {
+font-size: 22px;
+}
+.credit-icon-text h1 {
+font-size: 26px;
+}
+.credit-icon .col-md-3 {
+-ms-flex: 0 0 25%;
+flex: 0 0 50%;
+max-width: 50%;
+}
+.credit-icon-heading {
+margin-bottom: 20px;
+}
+footer {
+width: 100%;
+background: #d9e1f7;
+padding-top: 0;
+padding: 20px;
+}
+footer .navbar.navbar-expand-lg {
+width: 100%;
+max-width: 320px !important;
+margin: 0 auto;
+}
+.social-icon li a { 
+font-size: 16px;
+margin: 0px 6px;
+}
+}
+@media only screen and (max-width:767px){ 
+.main-header .col-md-3 {
+-ms-flex: 0 0 25%;
+flex: 0 0 25%;
+max-width: 25%;
+}
+.main-header .col-md-9 {
+-ms-flex: 0 0 75%;
+flex: 0 0 75%;
+max-width: 75%;
+}
+.banner-text-heading::before {
+display: none;
+}
+.banner-text-heading::after {	
+display: none;
+}
+.banner-text-heading {
+padding-top: 25px;
+}
+.car-section img {
+width: 100%;
+}
+.honda-city img {
+width: 100%;
+margin: 0 auto;
+position: unset;
+right: 0;
+margin-top: 50px;
+}
+.credit-text {
+padding-top: 0;
+padding-bottom: 50px;
+}
+.Credit-block {
+padding-top: 50px;
+}
+.deal-man img {
+display: none;
+}
+.heading-car-layout {
+padding-top: 0;
+text-align: center;
+padding-bottom: 300px;
+}
+.drive-block {
+padding: 0px 15px 50px;
+}
+.car-driving {
+padding-top: 0px;
+}
+
+.car-driving img {
+box-shadow: none;
+width: 100%;
+}
+footer .navbar.navbar-expand-lg {
+max-width: 100% !important; 
+}
+footer .navbar.navbar-expand-lg ul li {
+padding: 0px 0px;
+}
+
+}
+
+
+@media only screen and (max-width:575px){ 
+.credit-icon {
+padding: 0px 15px 20px;
+}
+.credit-icon .col-md-3 {
+-ms-flex: 0 0 100%;
+flex: 0 0 100%;
+max-width: 100%;
+}
+.credit-icon-heading {
+min-height: auto;
+}
+.banner-text-heading h1 {
+font-size: 50px;
+line-height: 54px;
+}
+.heading-car-layout h1 {
+font-size: 24px;
+}
+}
+
+
+
+@media only screen and (max-width:360px){ 
+.logo img {
+    width: 130px;
+}
 }
